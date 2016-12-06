@@ -1,7 +1,7 @@
 var express = require('express')
 
 var app = express()
-var server = app.listen('http://draw-with-me.surge.sh/')
+var server = app.listen(3000)
 
 app.use(express.static('public'))
 console.log("My socket server is running")

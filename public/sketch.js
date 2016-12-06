@@ -4,7 +4,7 @@ function setup() {
   createCanvas(1900, 800)
   background(51)
 
-  socket = io.connect('http://draw-with-me.surge.sh')
+  socket = io.connect('http://localhost:3000')
   socket.on('mouse', newDrawing)
 }
 
