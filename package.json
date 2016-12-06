@@ -1,0 +1,20 @@
+{
+  "name": "sockets_draw_with_me",
+  "version": "1.0.0",
+  "description": "Cooperative drawing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikona23/draw-with-me.git"
+  },
+  "author": "Peter Kona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikona23/draw-with-me/issues"
+  },
+  "homepage": "https://github.com/ikona23/draw-with-me#readme"
+}
