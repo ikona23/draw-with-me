@@ -1,21 +1,34 @@
-
 var socket
 
 function setup() {
-  createCanvas(800, 800)
+  createCanvas(1900, 800)
   background(51)
 
   socket = io.connect('http://localhost:3000')
+  socket.on('mouse', newDrawing)
+}
+
+function newDrawing(data) {
+  fill(190, 0, 20)
+  noStroke()
+  ellipse(data.x, data.y, 30, 30)
 
 }
 
-function mouseDrag() {
-  console.log(mouseX + ',' + mouseY)
-}
+function mouseDragged() {
+  console.log('sending', mouseX + ',' + mouseY)
 
-function draw() {
+  var data = {
+    x: mouseX,
+    y: mouseY
+  }
+
+  socket.emit('mouse', data)
   fill(190)
   noStroke()
   ellipse(mouseX, mouseY, 30, 30)
+}
+
+function draw() {
 
 }
