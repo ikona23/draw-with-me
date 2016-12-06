@@ -13,6 +13,6 @@ var io = socket(server)
 io.sockets.on('connection', newConnection)
 
 function newConnection(socket){
-  console.log('this is a socket: ', socket)
-  console.log(socket)
+  console.log('this is a socket: ', socket.id)
+  console.log(socket.id)
 }
